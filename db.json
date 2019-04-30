@@ -1,6 +1,7 @@
 {
-  "rates": [
-    { "id": 1, "title": "usdblr", "rate": "3.875304" },
-    { "id": 2, "title": "usdeur", "rate": "0.89027" }
-  ]
+  "base": "USD",
+  "rates": {
+    "BRL": 3.9267249064
+  },
+  "date": "2019-04-30"
 }
