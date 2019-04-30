@@ -1,0 +1,6 @@
+{
+  "rates": [
+    { "id": 1, "title": "usdblr", "rate": "3.875304" },
+    { "id": 2, "title": "usdeur", "rate": "0.89027" }
+  ]
+}
