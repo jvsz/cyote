@@ -8,13 +8,7 @@
 <script>
 import Origin from '../components/Origin.vue'
 import Result from '../components/Result.vue'
-import Mode from '../constants/Mode'
-import envMode from '../lib/env-mode'
-
-const UrlAPI = {
-  Production: 'https://www.freeforexapi.com/api/live?pairs=USDBRL',
-  Development: 'http://localhost:1300/rates?title=usdblr',
-}
+import api from '../lib/api'
 
 export default {
   name: 'home',
@@ -33,22 +27,12 @@ export default {
   },
 
   async created() {
-    let apiUrl
-    switch (envMode()) {
-      case Mode.Development:
-        apiUrl = UrlAPI.Development
-        break
-      case Mode.Production:
-        apiUrl = UrlAPI.Production
-      default:
-        break
-    }
     try {
-      const response = await fetch(apiUrl, {
+      const response = await fetch(api(), {
         // mode: 'no-cors',
       })
       const json = await response.json()
-      this.rate = Number(json[0].rate)
+      this.rate = Number(json.rates['BRL'])
       this.getCurrencyQuote(1)
     } catch (e) {
       console.log(e)
