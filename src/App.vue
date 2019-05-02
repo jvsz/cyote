@@ -40,18 +40,12 @@ html {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+  justify-items: center;
   padding: 0.5em 0.5em;
 }
 
 .logo {
-  display: none;
-}
-
-@media (min-width: 30em) {
-  .logo {
-    display: block;
-    visibility: hidden;
-  }
+  visibility: hidden;
 }
 
 .app-title {
@@ -67,8 +61,6 @@ html {
   font-size: 1.2rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   margin: 0;
   padding: 0;
   height: 100vh;
