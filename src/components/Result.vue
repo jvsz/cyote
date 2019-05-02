@@ -1,6 +1,6 @@
 <template>
   <section class="grid result">
-    <label for class="currency result-currency">USD</label>
+    <label for class="currency result-currency">BLR</label>
     <input disabled type="text" placeholder="1.00" class="input result-input" v-model="resultValue">
   </section>
 </template>

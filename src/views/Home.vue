@@ -1,18 +1,18 @@
 <template>
   <div class="main-content">
-    <Origin v-on:change-origin="getCurrencyQuote"/>
+    <Base v-on:change-base="getCurrencyQuote"/>
     <Result v-bind:result-value="resultValue"/>
   </div>
 </template>
 
 <script>
-import Origin from '../components/Origin.vue'
+import Base from '../components/Base.vue'
 import Result from '../components/Result.vue'
 import api from '../lib/api'
 
 export default {
   name: 'home',
-  components: { Origin, Result },
+  components: { Base, Result },
   data() {
     return {
       rate: 0,

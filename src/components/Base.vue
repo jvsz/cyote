@@ -1,11 +1,11 @@
 <template>
-  <section class="grid origin">
-    <label for class="currency origin-currency">BLR</label>
+  <section class="grid base">
+    <label for class="currency base-currency">USD</label>
 
     <imask-input
-      v-model="originValue"
-      v-on:input="updateOrigin"
-      class="input origin-input"
+      v-model="baseValue"
+      v-on:input="updatebase"
+      class="input base-input"
       :mask="Number"
       radix="."
       :unmask="true"
@@ -18,33 +18,33 @@
 import { IMaskComponent } from 'vue-imask'
 
 export default {
-  name: 'Origin',
+  name: 'Base',
   data() {
     return {
-      originValue: '',
+      baseValue: '',
     }
   },
   components: {
     'imask-input': IMaskComponent,
   },
   methods: {
-    updateOrigin() {
-      this.$emit('change-origin', this.originValue)
+    updatebase() {
+      this.$emit('change-base', this.baseValue)
     },
   },
 }
 </script>
 
 <style scoped>
-.origin {
+.base {
   background: hsl(215, 50%, 60%);
 }
 
-.origin-currency {
+.base-currency {
   color: white;
 }
 
-.origin-input {
+.base-input {
   color: white;
   border-color: #fff;
 }
